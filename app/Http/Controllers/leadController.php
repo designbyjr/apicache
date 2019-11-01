@@ -12,11 +12,18 @@ class leadController extends Controller
 {
     
 	/**
-	 * @api {create} /tasks/:id Remove a task
-	 * @apiGroup Tasks
-	 * @apiParam {id} id Task id
+	 * @api {create} /create Remove a task
+	 * @apiGroup  create
+        * @apiParam {index} index int
+        * @apiParam {First_Name} First_Name string
+        * @apiParam {Last_Name} Last_Name string
+        * @apiParam {Email} Email string
+        * @apiParam {Company} Company string optional
+        * @apiParam {Post_Code} Post_Code string
+        * @apiParam {Accept_Terms} Accept_Terms boolean
+        * @apiParam {Date_created} Date_created
 	 * @apiSuccessExample {json} Success
-	 *    HTTP/1.1 204 No Content
+	 *    HTTP/1.1 201
 	 * @apiErrorExample {json} Delete error
 	 *    HTTP/1.1 500 Internal Server Error
 	 */
@@ -43,11 +50,18 @@ class leadController extends Controller
 
 
     /**
-	 * @api {update} /tasks/:id Remove a task
-	 * @apiGroup Tasks
-	 * @apiParam {id} id Task id
+	 * @api {update} /update update record by index
+     * @apiParam {api_key} API KEY
+     * @apiParam {index} index int
+        * @apiParam {First_Name} First_Name string
+        * @apiParam {Last_Name} Last_Name string
+        * @apiParam {Email} Email string
+        * @apiParam {Company} Company string optional
+        * @apiParam {Post_Code} Post_Code string
+        * @apiParam {Accept_Terms} Accept_Terms boolean
+        * @apiParam {Date_created} Date_created
 	 * @apiSuccessExample {json} Success
-	 *    HTTP/1.1 204 No Content
+	 *    HTTP/1.1 200
 	 * @apiErrorExample {json} Delete error
 	 *    HTTP/1.1 500 Internal Server Error
 	 */
@@ -74,9 +88,9 @@ class leadController extends Controller
 
 
      /**
-	 * @api {read} /tasks/:id Remove a task
-	 * @apiGroup Tasks
-	 * @apiParam {id} id Task id
+	 * @api {read} /read Remove a task
+	 * @apiGroup read
+    * @apiParam {api_key} API KEY
 	 * @apiSuccessExample {json} Success
 	 *    HTTP/1.1 204 No Content
      * @apiSuccessExample {json} Success
@@ -92,11 +106,12 @@ class leadController extends Controller
     }
 
      /**
-	 * @api {delete} /tasks/:id Remove a task
-	 * @apiGroup Tasks
-	 * @apiParam {id} id Task id
+	 * @api {delete} /delete Remove a task
+	 * @apiGroup delete
+	 * @apiParam {api_key} API KEY
+     * @apiParam {index} index
 	 * @apiSuccessExample {json} Success
-	 *    HTTP/1.1 204 No Content
+	 *    HTTP/1.1 200
 	 * @apiErrorExample {json} Delete error
 	 *    HTTP/1.1 500 Internal Server Error
 	 */
